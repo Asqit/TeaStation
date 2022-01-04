@@ -1,0 +1,85 @@
+//===========================================
+//                 CONTACT 
+//===========================================
+.contact
+{
+    background:$clr_grey-10;
+    &-info
+    {
+        &-item
+        {
+            max-width:20rem;
+            margin-bottom:1.75rem;
+            h4
+            {
+                letter-spacing:1px;
+                text-transform:capitalize;
+            }
+        }
+    }
+    &-form
+    {
+        max-width:35rem;
+        background:$clr_white;
+        border-radius:$radius;
+        text-align:center;
+        box-shadow:0 5px 15px rgba(0,0,0,.1);
+        transition:$transition;
+        h3
+        {
+            padding-top:1.25rem;
+            color:$clr_grey-5;
+        }
+        .form-group
+        {
+            padding: 1rem 1.5rem;
+            .form-control
+            {
+                display:block;
+                width:100%;
+                padding:0.75rem 1rem;
+                border:none;
+                margin-bottom:1.25rem;
+                background:$clr_grey-10;
+                border-radius:$radius;
+            }
+            .form-control::placeholder
+            {
+                font-family:$ff_primary;
+                color: $clr_grey-1;
+            }
+            textarea
+            {
+                resize:none;
+            };
+        }
+        .submit-btn
+        {
+            display:block;
+            width:100%;
+            padding:1rem;
+            border-bottom-left-radius:$radius;
+            border-bottom-right-radius:$radius;
+        }
+    }
+    &-form:hover
+    {
+        box-shadow:0 5px 15px rgba(0,0,0,.2);
+    }
+    &-form,
+    &-info
+    {
+        margin:1rem 0;
+    }
+}
+
+
+@media screen and (min-width:992px) 
+{
+    .contact-form,
+    .contact-info
+    {
+        float:left;
+        width:50%;
+    }    
+}

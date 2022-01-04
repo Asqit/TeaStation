@@ -1,0 +1,114 @@
+*
+{
+    padding:0;
+    margin:0;
+    outline:none;
+    box-sizing:border-box;
+    //border:1px solid red;
+    ::selection
+    {
+        background-color:$clr_primary;
+        color:$clr_grey-10;
+    }
+}
+body
+{
+    font-family:$ff_primary;
+    background:$clr_white;
+    color:$clr_grey-1;
+    line-height:1.5;
+    min-height:300vh;
+    font-size:0.875rem;                             //small font-size cuz of mobile 1st
+}
+a{text-decoration:none;}
+img{user-select:none;}
+img
+{
+    width:100%;
+    display:block;                                  //using to eliminate spacing (used overflow to hide it)
+}
+h1,h2,h3,h4
+{
+    letter-spacing:$spacing;
+    text-transform:capitalize;
+    line-height:1.2;
+    margin-bottom:0.75rem;
+}
+h1{font-size:3rem;}
+h2{font-size:2rem;}
+h3{font-size:1.5rem;}
+h4{font-size:0.875rem;}
+p{margin-bottom:1.25rem;}
+
+@media screen and(min-width:800px)
+{
+    h1{font-size:4rem;}
+    h2{font-size:2.5rem;}
+    h3{font-size:2rem;}
+    h4{font-size:1rem;}
+    body{font-size:1rem;}
+    h1,h2,h3,h4{line-height:1;}
+}
+.btn
+{
+    background-color:$clr_primary;
+    color:$clr_white;
+    text-transform:uppercase;
+    padding:0.5rem 1rem;
+    letter-spacing:$spacing;
+    display:inline-block;
+    font-weight:700;
+    transition:$transition;
+    border:none;
+    font-size:1rem;
+    cursor:pointer;
+    box-shadow:0 1px 3px rgba(0,0,0,0.2);
+}
+.btn:hover
+{
+    color:$clr_primary;
+    background-color:$clr_primary_light;
+}
+.clearfix::after,                                   //basically fixing height of container 
+.clearfix::before                                   
+{
+    content:"";
+    clear:both;
+    display:table;
+}
+
+.section-title 
+{
+    margin-bottom:2rem;
+    h3
+    {
+        font-family:$ff_secondary;
+        color:$clr_primary;
+    }
+}
+.section-center
+{
+    padding:4rem 0;
+    width:85vw;
+    margin:0 auto;
+    max-width:1170px;
+}
+@media screen and (min-width:992px)
+{
+    .section-center
+    {
+        width:95vw;
+        padding:4rem 1rem;
+    }
+}
+
+.typo-green
+{
+    color:$clr_primary;
+    font-weight:400;
+}
+
+.green
+{
+    background:$clr_primary;
+}
